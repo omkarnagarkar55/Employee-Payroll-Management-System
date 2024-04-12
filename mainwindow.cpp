@@ -1,5 +1,6 @@
 #include "mainwindow.h"
-#include "WelcomeWidget.h"
+// #include "WelcomeWidget.h"
+#include "DashboardWidget.h"
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
@@ -60,9 +61,12 @@ void MainWindow::on_loginButton_clicked()
         this->hide();
 
         // Create and show welcome widget
-        WelcomeWidget *welcomeWidget = new WelcomeWidget();
-        welcomeWidget->show();
-        welcomeWidget->findChild<QLabel*>()->setText(QString("Welcome, %1. Click below to see your recent payroll.").arg(username));
+        // WelcomeWidget *welcomeWidget = new WelcomeWidget();
+        // welcomeWidget->show();
+        // welcomeWidget->findChild<QLabel*>()->setText(QString("Welcome, %1. Click below to see your recent payroll.").arg(username));
+        DashboardWidget *dashboardWidget = new DashboardWidget();
+        dashboardWidget->show();
+
     } else {
         QMessageBox::warning(this, "Login Failed", "Incorrect username or password.");
     }

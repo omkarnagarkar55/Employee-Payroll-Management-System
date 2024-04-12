@@ -124,6 +124,8 @@ payroll-system_autogen/timestamp: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/sys/wait.h \
   /Users/spartan/Employee-Payroll-Management-System/CMakeLists.txt \
+  /Users/spartan/Employee-Payroll-Management-System/DashboardWidget.cpp \
+  /Users/spartan/Employee-Payroll-Management-System/DashboardWidget.h \
   /Users/spartan/Employee-Payroll-Management-System/WelcomeWidget.cpp \
   /Users/spartan/Employee-Payroll-Management-System/WelcomeWidget.h \
   .qtc/package-manager/auto-setup.cmake \
@@ -133,6 +135,8 @@ payroll-system_autogen/timestamp: \
   /Users/spartan/Employee-Payroll-Management-System/main.cpp \
   /Users/spartan/Employee-Payroll-Management-System/mainwindow.cpp \
   /Users/spartan/Employee-Payroll-Management-System/mainwindow.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QDateTime \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
@@ -146,11 +150,13 @@ payroll-system_autogen/timestamp: \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qatomic.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qatomic_cxx11.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qbindingstorage.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qbytearray.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qbytearraylist.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayview.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcalendar.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qchar.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcompare.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcompare_impl.h \
@@ -164,6 +170,7 @@ payroll-system_autogen/timestamp: \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qdatetime.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qdebug.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qendian.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
@@ -184,6 +191,7 @@ payroll-system_autogen/timestamp: \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlist.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlocale.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qmap.h \
@@ -235,6 +243,7 @@ payroll-system_autogen/timestamp: \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/Headers/qtpreprocessorsupport.h \
@@ -287,12 +296,17 @@ payroll-system_autogen/timestamp: \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMainWindow \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QMessageBox \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialog.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qdialogbuttonbox.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
+  /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qlineedit.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmainwindow.h \
   /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/Headers/qmessagebox.h \

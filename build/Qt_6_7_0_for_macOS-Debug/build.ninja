@@ -81,6 +81,14 @@ build CMakeFiles/payroll-system.dir/WelcomeWidget.cpp.o: CXX_COMPILER__payroll-s
   OBJECT_DIR = CMakeFiles/payroll-system.dir
   OBJECT_FILE_DIR = CMakeFiles/payroll-system.dir
 
+build CMakeFiles/payroll-system.dir/DashboardWidget.cpp.o: CXX_COMPILER__payroll-system_unscanned_Debug /Users/spartan/Employee-Payroll-Management-System/DashboardWidget.cpp || cmake_object_order_depends_target_payroll-system
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/payroll-system.dir/DashboardWidget.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/payroll-system_autogen/include -isystem /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Headers -iframework /Users/spartan/Qt/6.7.0/macos/lib -isystem /Users/spartan/Qt/6.7.0/macos/mkspecs/macx-clang -isystem /Users/spartan/Qt/6.7.0/macos/include -isystem /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Headers -isystem /Users/spartan/Qt/6.7.0/macos/lib/QtGui.framework/Headers -isystem /Users/spartan/Qt/6.7.0/macos/lib/QtSql.framework/Headers
+  OBJECT_DIR = CMakeFiles/payroll-system.dir
+  OBJECT_FILE_DIR = CMakeFiles/payroll-system.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target payroll-system
@@ -89,7 +97,7 @@ build CMakeFiles/payroll-system.dir/WelcomeWidget.cpp.o: CXX_COMPILER__payroll-s
 #############################################
 # Link the executable payroll-system.app/Contents/MacOS/payroll-system
 
-build payroll-system.app/Contents/MacOS/payroll-system: CXX_EXECUTABLE_LINKER__payroll-system_Debug CMakeFiles/payroll-system.dir/payroll-system_autogen/mocs_compilation.cpp.o CMakeFiles/payroll-system.dir/main.cpp.o CMakeFiles/payroll-system.dir/mainwindow.cpp.o CMakeFiles/payroll-system.dir/WelcomeWidget.cpp.o | /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/spartan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/spartan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || payroll-system_autogen payroll-system_autogen_timestamp_deps
+build payroll-system.app/Contents/MacOS/payroll-system: CXX_EXECUTABLE_LINKER__payroll-system_Debug CMakeFiles/payroll-system.dir/payroll-system_autogen/mocs_compilation.cpp.o CMakeFiles/payroll-system.dir/main.cpp.o CMakeFiles/payroll-system.dir/mainwindow.cpp.o CMakeFiles/payroll-system.dir/WelcomeWidget.cpp.o CMakeFiles/payroll-system.dir/DashboardWidget.cpp.o | /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/spartan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/spartan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore || payroll-system_autogen payroll-system_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   LINK_LIBRARIES = -Wl,-rpath,/Users/spartan/Qt/6.7.0/macos/lib  /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/spartan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql  /Users/spartan/Qt/6.7.0/macos/lib/QtGui.framework/Versions/A/QtGui  -framework OpenGL  -framework AGL  -framework AppKit  -framework ImageIO  -framework Metal  /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration
   LINK_PATH = -F/Users/spartan/Qt/6.7.0/macos/lib
@@ -191,7 +199,7 @@ build payroll-system_autogen/timestamp payroll-system_autogen/mocs_compilation.c
 #############################################
 # Phony custom command for CMakeFiles/payroll-system_autogen_timestamp_deps
 
-build CMakeFiles/payroll-system_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/payroll-system_autogen_timestamp_deps: phony /Users/spartan/Qt/6.7.0/macos/./libexec/uic /Users/spartan/Qt/6.7.0/macos/./libexec/moc /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/spartan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql
+build CMakeFiles/payroll-system_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/payroll-system_autogen_timestamp_deps: phony /Users/spartan/Qt/6.7.0/macos/lib/QtSql.framework/Versions/A/QtSql /Users/spartan/Qt/6.7.0/macos/./libexec/uic /Users/spartan/Qt/6.7.0/macos/./libexec/moc /Users/spartan/Qt/6.7.0/macos/lib/QtCore.framework/Versions/A/QtCore /Users/spartan/Qt/6.7.0/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
 
 
 #############################################
