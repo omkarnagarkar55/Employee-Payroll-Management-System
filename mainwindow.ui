@@ -2,13 +2,22 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>368</width>
+    <height>306</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>17</pointsize>
+    <bold>false</bold>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Login Window</string>
@@ -19,12 +28,12 @@
      <rect>
       <x>50</x>
       <y>50</y>
-      <width>200</width>
-      <height>30</height>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>admin</string>
+     <string/>
     </property>
     <property name="placeholderText">
      <string>Enter your username</string>
@@ -35,12 +44,12 @@
      <rect>
       <x>50</x>
       <y>100</y>
-      <width>200</width>
-      <height>30</height>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>password</string>
+     <string/>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -52,10 +61,10 @@
    <widget class="QPushButton" name="loginButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>150</y>
-      <width>200</width>
-      <height>30</height>
+      <x>60</x>
+      <y>170</y>
+      <width>211</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">

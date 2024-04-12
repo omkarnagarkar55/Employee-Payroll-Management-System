@@ -1,0 +1,9 @@
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/payroll-system.dir
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/install.dir
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/install/strip.dir
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/payroll-system_autogen_timestamp_deps.dir
+/Users/spartan/Employee-Payroll-Management-System/build/Qt_6_7_0_for_macOS-Debug/CMakeFiles/payroll-system_autogen.dir

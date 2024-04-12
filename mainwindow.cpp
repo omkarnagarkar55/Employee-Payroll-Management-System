@@ -1,5 +1,9 @@
 #include "mainwindow.h"
 #include "WelcomeWidget.h"
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -21,10 +25,23 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Connect the button click signal to the slot
     connect(loginButton, &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked);
-}
 
-MainWindow::~MainWindow()
-{
+    // Initialize database
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("authentication.db");
+    if (!db.open()) {
+        QMessageBox::critical(this, "Database Error", db.lastError().text());
+        return;
+    }
+
+    // Create the users table if it does not exist
+    QSqlQuery query;
+    query.exec("CREATE TABLE IF NOT EXISTS users (username TEXT UNIQUE, password TEXT)");
+
+    // Optionally, pre-load some users (you can remove this part after the first run)
+    if (!query.exec("INSERT OR IGNORE INTO users (username, password) VALUES ('admin', 'adminpass'), ('user', 'userpass')")) {
+        QMessageBox::critical(this, "Database Error", query.lastError().text());
+    }
 }
 
 void MainWindow::on_loginButton_clicked()
@@ -32,8 +49,13 @@ void MainWindow::on_loginButton_clicked()
     QString username = usernameLineEdit->text();
     QString password = passwordLineEdit->text();
 
-    // Simple authentication: check if the credentials match
-    if (username == "admin" && password == "password") {
+    QSqlQuery query;
+    query.prepare("SELECT username FROM users WHERE username = :username AND password = :password");
+    query.bindValue(":username", username);
+    query.bindValue(":password", password);
+    query.exec();
+
+    if (query.next()) {
         // Close the current window or hide elements
         this->hide();
 
@@ -44,4 +66,9 @@ void MainWindow::on_loginButton_clicked()
     } else {
         QMessageBox::warning(this, "Login Failed", "Incorrect username or password.");
     }
+}
+
+MainWindow::~MainWindow()
+{
+    // Destructor content, if needed
 }
