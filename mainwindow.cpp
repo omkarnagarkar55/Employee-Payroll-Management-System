@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "WelcomeWidget.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -33,7 +34,13 @@ void MainWindow::on_loginButton_clicked()
 
     // Simple authentication: check if the credentials match
     if (username == "admin" && password == "password") {
-        QMessageBox::information(this, "Login Success", "You are authenticated!");
+        // Close the current window or hide elements
+        this->hide();
+
+        // Create and show welcome widget
+        WelcomeWidget *welcomeWidget = new WelcomeWidget();
+        welcomeWidget->show();
+        welcomeWidget->findChild<QLabel*>()->setText(QString("Welcome, %1. Click below to see your recent payroll.").arg(username));
     } else {
         QMessageBox::warning(this, "Login Failed", "Incorrect username or password.");
     }
