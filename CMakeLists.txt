@@ -20,6 +20,8 @@ set(PROJECT_SOURCES
         mainwindow.ui
         WelcomeWidget.cpp
         WelcomeWidget.h
+        Department.h
+        Department.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
