@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 // #include "WelcomeWidget.h"
+#include "WelcomeWidget.h"
 #include "DashboardWidget.h"
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -16,13 +17,20 @@ MainWindow::MainWindow(QWidget *parent)
     // Connect the button click signal to the slot
     connect(ui->loginButton, &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked);
 
-    // Initialize database
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("authentication.db");
-    if (!db.open()) {
-        QMessageBox::critical(this, "Database Error", db.lastError().text());
-        return;
-    }
+     // Initialize database
+     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+     db.setDatabaseName("authentication.db");
+     if (!db.open()) {
+         QMessageBox::critical(this, "Database Error", db.lastError().text());
+         return;
+     }
+    // QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "MainDB");
+    // db.setDatabaseName("authentication.db");
+    // if (!db.open()) {
+    //     QMessageBox::critical(this, "Database Error", db.lastError().text());
+    //     return;
+    // }
+
 
     // Create the users table if it does not exist
     QSqlQuery query;

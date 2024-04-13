@@ -76,7 +76,8 @@ DashboardWidget::DashboardWidget(QWidget *parent) : QWidget(parent)
                                                         tr("Department Name:"), QLineEdit::Normal,
                                                         QDir::home().dirName(), &ok);
                 if (ok && !deptName.isEmpty()) {
-                    deptManager->addDepartment(deptName);
+                    // deptManager->addDepartment(deptName);
+                    QMessageBox::information(nullptr, "New Department", "New department created: " + deptName);
                 }
             }
         });
