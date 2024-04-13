@@ -17,11 +17,11 @@ public:
 
 private slots:
     void updateTime();
+    void onAddEmployee(); // Slot to handle the addition of a new employee
 
 private:
     QLabel *timeLabel;
     QTimer *timer;
-    QVBoxLayout *mainLayout;
 };
 
 #endif // DASHBOARDWIDGET_H

@@ -1,12 +1,8 @@
 #include "DashboardWidget.h"
-#include <QVBoxLayout>
-#include <QDateTime>
-#include <QTimer>
-#include <QPalette>
-#include <QBrush>
-#include <QLinearGradient>
 #include <QGridLayout>
 #include <QSpacerItem>
+#include <QMessageBox>
+#include "EmployeeForm.h" // Include the Employee form dialog header
 
 DashboardWidget::DashboardWidget(QWidget *parent) : QWidget(parent)
 {
@@ -29,6 +25,9 @@ DashboardWidget::DashboardWidget(QWidget *parent) : QWidget(parent)
         QPushButton *button = new QPushButton(buttonText, this);
         button->setMinimumHeight(40); // Minimum button height
         buttonLayout->addWidget(button);
+        if (buttonText == "Add New Employee") {
+            connect(button, &QPushButton::clicked, this, &DashboardWidget::onAddEmployee);
+        }
     }
 
     gridLayout->addLayout(buttonLayout, 1, 0, 1, 1); // Add button layout to the grid
@@ -56,4 +55,11 @@ void DashboardWidget::updateTime()
 {
     QDateTime currentTime = QDateTime::currentDateTime();
     timeLabel->setText(currentTime.toString("hh:mm:ss dd-MM-yyyy"));
+}
+
+void DashboardWidget::onAddEmployee()
+{
+    EmployeeForm *form = new EmployeeForm(this); // Assuming EmployeeForm is a QDialog derived class
+    form->setModal(true);
+    form->exec(); // This blocks until the form is closed
 }
