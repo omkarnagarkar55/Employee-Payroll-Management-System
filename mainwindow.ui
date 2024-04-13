@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>527</width>
-    <height>772</height>
+    <width>600</width>
+    <height>533</height>
    </rect>
   </property>
   <property name="font">
@@ -26,8 +26,8 @@
    <widget class="QLineEdit" name="usernameLineEdit">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>290</y>
+      <x>170</x>
+      <y>230</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -42,8 +42,8 @@
    <widget class="QLineEdit" name="passwordLineEdit">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>380</y>
+      <x>170</x>
+      <y>310</y>
       <width>241</width>
       <height>41</height>
      </rect>
@@ -61,14 +61,62 @@
    <widget class="QPushButton" name="loginButton">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>490</y>
-      <width>211</width>
+      <x>220</x>
+      <y>410</y>
+      <width>121</width>
       <height>51</height>
      </rect>
     </property>
     <property name="text">
      <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>59</x>
+      <y>90</y>
+      <width>451</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Payroll System</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>240</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>320</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Password</string>
     </property>
    </widget>
   </widget>

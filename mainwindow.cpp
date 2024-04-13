@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "ui_mainwindow.h"
 // #include "WelcomeWidget.h"
 #include "DashboardWidget.h"
 #include <QSqlDatabase>
@@ -8,24 +9,12 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
 {
-    // Set up the UI components
-    usernameLineEdit = new QLineEdit(this);
-    passwordLineEdit = new QLineEdit(this);
-    loginButton = new QPushButton("Login", this);
-
-    // Set placeholder texts
-    usernameLineEdit->setPlaceholderText("Enter your username");
-    passwordLineEdit->setPlaceholderText("Enter your password");
-    passwordLineEdit->setEchoMode(QLineEdit::Password); // Hide password input
-
-    // Position the UI elements
-    usernameLineEdit->setGeometry(50, 50, 200, 30);
-    passwordLineEdit->setGeometry(50, 100, 200, 30);
-    loginButton->setGeometry(50, 150, 200, 30);
+    ui->setupUi(this);
 
     // Connect the button click signal to the slot
-    connect(loginButton, &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked);
+    connect(ui->loginButton, &QPushButton::clicked, this, &MainWindow::on_loginButton_clicked);
 
     // Initialize database
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -40,15 +29,15 @@ MainWindow::MainWindow(QWidget *parent)
     query.exec("CREATE TABLE IF NOT EXISTS users (username TEXT UNIQUE, password TEXT)");
 
     // Optionally, pre-load some users (you can remove this part after the first run)
-    if (!query.exec("INSERT OR IGNORE INTO users (username, password) VALUES ('admin', 'adminpass'), ('user', 'userpass')")) {
+    if (!query.exec("INSERT OR IGNORE INTO users (username, password) VALUES ('admin', 'admin'), ('user', 'user')")) {
         QMessageBox::critical(this, "Database Error", query.lastError().text());
     }
 }
 
 void MainWindow::on_loginButton_clicked()
 {
-    QString username = usernameLineEdit->text();
-    QString password = passwordLineEdit->text();
+    QString username = ui->usernameLineEdit->text();
+    QString password = ui->passwordLineEdit->text();
 
     QSqlQuery query;
     query.prepare("SELECT username FROM users WHERE username = :username AND password = :password");
